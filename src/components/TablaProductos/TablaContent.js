@@ -6,7 +6,7 @@ import TablaRow from "./TablaRow";
 function TablaContent(){
     const [productos, setProductos] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:3030/api/products')
+        fetch('/api/products')
         .then(response => response.json())
         .then(data => {
             setProductos(data.data);
